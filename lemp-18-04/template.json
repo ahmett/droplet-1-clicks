@@ -3,7 +3,7 @@
   "variables": {
     "do_api_token": "{{env `DIGITALOCEAN_API_TOKEN`}}",
     "image_name": "lemp-18-04-snapshot-{{timestamp}}",
-    "apt_packages": "fail2ban mysql-server nginx php8.0-apcu php8.0-curl php8.0-mysql php8.0-fpm postfix python-certbot-nginx software-properties-common",
+    "apt_packages": "fail2ban mysql-server nginx php7.2-apcu php7.2-curl php7.2-mysql php7.2-fpm postfix software-properties-common",
     "application_name": "LEMP",
     "application_version": ""
   },
@@ -13,7 +13,7 @@
       "type": "digitalocean",
       "api_token": "{{user `do_api_token`}}",
       "image": "ubuntu-18-04-x64",
-      "region": "nyc3",
+      "region": "fra1",
       "size": "s-1vcpu-1gb",
       "ssh_username": "root",
       "snapshot_name": "{{user `image_name`}}"
